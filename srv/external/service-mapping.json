@@ -1,0 +1,13 @@
+{
+    "s9d-tbusinessobject": {
+      "directoryName": "s9d-tbusinessobject",   #woher kommt der directory name
+      "servicePath": "/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
+      "npmPackageName": "s9d-tbusinessobject"   #was für n npm package
+    },
+    "s9d_myprofile": {
+      "directoryName": "s9d_myprofile",
+      "servicePath": "/sap/opu/odata/sap/hcmfab_myprofile_srv",
+      "npmPackageName": "s9d_myprofile"
+    }
+  }
+  

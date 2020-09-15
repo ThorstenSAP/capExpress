@@ -6,6 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/core": "^1.28.1",
+    "@sap-cloud-sdk/generator": "^1.28.1",
     "@sap/cds": "^4",
     "express": "^4"
   },
@@ -13,6 +15,15 @@
     "sqlite3": "^4"
   },
   "scripts": {
-    "start": "npx cds run"
+    "start": "npx cds run",
+    "generate-odata-client": "npx generate-odata-client --inputDir srv/external --outputDir srv/odata-client --forceOverwrite"
+  },
+  "cds": {
+    "requires": {
+      "s9d-tbusinessobject": {
+        "kind": "odata",
+        "model": "srv/external/s9d-tbusinessobject"
+      }
+    }
   }
 }

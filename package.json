@@ -12,7 +12,7 @@
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^4"
+    "sqlite3": "^4.2.0"
   },
   "scripts": {
     "start": "npx cds run",
@@ -24,11 +24,18 @@
         "kind": "odata",
         "model": "srv/external/tbusinessobject",
         "credentials": {
-          "xdestination": "NETWEAVER_ABAP",
+          "--xdestination": "NETWEAVER_ABAP",
           "destination": "S9D_LOCAL",
-          "zdestination": "LOCAL",
-          "requestTimeout": 30000
+          "--zdestination": "LOCAL",
+          "--requestTimeout": 30000
         }
+      },
+      "NorthWind": {
+        "kind": "odata",
+        "model": "srv/external/NorthWind",
+				"credentials": {
+					"url": "https://services.odata.org/Experimental/OData/OData.svc"
+				}
       }
     }
   }

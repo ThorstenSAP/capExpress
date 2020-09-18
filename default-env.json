@@ -3,8 +3,8 @@
         {
             "name": "S9D_LOCAL",
             "url": "http://qebui.js-soft.local:8000/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS/",
-            "username": "S4PLT",
-            "password": "jssoft2020"
+            "username": "tmueller",
+            "password": "Myjssap93!"
         }
     ]
 }

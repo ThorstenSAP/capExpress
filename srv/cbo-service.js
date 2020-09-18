@@ -1,7 +1,9 @@
-const s9dService = require('./external/s9d-service')
+const cds = require('@sap/cds')
 
-module.exports = async (srv) => {
-    srv.on("browse", asnyc (req) => {
-        const result = await s9dService.getTBusinessObject()
-    })
-}
+module.exports = cds.service.impl(async function() {
+	const { TBusinessObj } = this.entities;
+	const service = await cds.connect.to('tbusinessobject');
+	this.on('READ', TBusinessObj, request => {
+		return service.tx(request).run(request.query);
+	});
+});

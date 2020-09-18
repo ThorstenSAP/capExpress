@@ -1,9 +1,9 @@
 {
   "definitions": {
-    "s9d-tbusinessobject": {
+    "tbusinessobject": {
       "kind": "service"
     },
-    "s9d-tbusinessobject.xJSSxTBUSINESSOBJECT": {
+    "tbusinessobject.xJSSxTBUSINESSOBJECT": {
       "kind": "entity",
       "@cds.persistence.skip": true,
       "elements": {

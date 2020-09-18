@@ -1,6 +1,9 @@
-using {s9d-tbusinessobject as tbusiness} from './external/s9d-tbusinessobject.csn'
+using {tbusinessobject as external} from './external/tbusinessobject.csn';
+using {db as dbtest} from '../db/schema';
 
-@path '/browse'
+
+@path: '/browse'
 service browse {
-    
+    entity People as projection on dbtest.People;
+    entity TBusinessObj as projection on external.xJSSxTBUSINESSOBJECT ;
 }

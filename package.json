@@ -20,9 +20,15 @@
   },
   "cds": {
     "requires": {
-      "s9d-tbusinessobject": {
+      "tbusinessobject": {
         "kind": "odata",
-        "model": "srv/external/s9d-tbusinessobject"
+        "model": "srv/external/tbusinessobject",
+        "credentials": {
+          "xdestination": "NETWEAVER_ABAP",
+          "destination": "S9D_LOCAL",
+          "zdestination": "LOCAL",
+          "requestTimeout": 30000
+        }
       }
     }
   }

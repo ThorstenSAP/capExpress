@@ -1,7 +1,0 @@
-{
-  "s9d-tbusinessobject": {
-    "directoryName": "x-js-sx-tbusinessobject-cds-service",
-    "servicePath": "/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
-    "npmPackageName": "x-js-sx-tbusinessobject-cds-service"
-  }
-}

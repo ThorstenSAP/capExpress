@@ -1,0 +1,41 @@
+{
+  "definitions": {
+    "xJSSxTBUSINESSOBJECT": {
+      "kind": "service"
+    },
+    "xJSSxTBUSINESSOBJECT.xJSSxTBUSINESSOBJECT": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "SAP_UUID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "LastName": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "FirstName": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Age": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "Birthday": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "ID": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SAP_Description": {
+          "type": "cds.String",
+          "length": 80
+        }
+      }
+    }
+  }
+}

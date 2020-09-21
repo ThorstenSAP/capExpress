@@ -1,4 +1,5 @@
-using {tbusinessobject as external} from './external/tbusinessobject.csn';
+using {xJSSxTBUSINESSOBJECT as externalxJSSx} from './external/xJSSxTBUSINESSOBJECT.csn';
+using {tbusinessobject as externalTbusinessObject} from './external/tbusinessobject';
 using {NorthWind as externNorthwind} from './external/NorthWind';
 using {db as dbtest} from '../db/schema';
 
@@ -9,5 +10,6 @@ service browse {
     entity Products as projection on externNorthwind.Products {
         key ID, Name, Description, ReleaseDate, DiscontinuedDate, Rating, Price
     };
-    entity TBusinessObj as projection on external.xJSSxTBUSINESSOBJECT ;
+    entity xJSSxTBUSINESSOBJECT as projection on externalxJSSx.xJSSxTBUSINESSOBJECT ;
+    entity tbusinessobject as projection on externalTbusinessObject.xJSSxTBUSINESSOBJECT;
 }

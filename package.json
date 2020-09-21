@@ -9,6 +9,7 @@
     "@sap-cloud-sdk/core": "^1.28.1",
     "@sap-cloud-sdk/generator": "^1.28.1",
     "@sap/cds": "^4",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.4.44",
     "express": "^4"
   },
   "devDependencies": {
@@ -33,9 +34,19 @@
       "NorthWind": {
         "kind": "odata",
         "model": "srv/external/NorthWind",
-				"credentials": {
-					"url": "https://services.odata.org/Experimental/OData/OData.svc"
-				}
+        "credentials": {
+          "url": "https://services.odata.org/Experimental/OData/OData.svc"
+        }
+      },
+      "xJSSxTBUSINESSOBJECT": {
+        "kind": "odata",
+        "model": "srv/external/xJSSxTBUSINESSOBJECT",
+        "credentials": {
+          "destination": "S9D_LOCAL",
+          "--url": "http://qebui.js-soft.local:8000/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS/",
+          "--username": "tmueller",
+          "--password": "Myjssap93!"
+        }
       }
     }
   }

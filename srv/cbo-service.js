@@ -1,11 +1,17 @@
 const cds = require('@sap/cds')
 
 module.exports = cds.service.impl(async function() {
-    const { xJSSxTBUSINESSOBJECT, tbusinessobject, Products, PeopleSet } = this.entities;
     // console.log(this.entities)
     const s9d_tbusobj = await cds.connect.to('xJSSxTBUSINESSOBJECT');
     const s9d_pltSrv = await cds.connect.to('s9d_Z_PLT_SRV')
     const northwind = await cds.connect.to('NorthWind')
+
+    const { xJSSxTBUSINESSOBJECT, tbusinessobject, Products } = this.entities;
+    const {PeopleSet} = s9d_pltSrv.entities
+    console.log(this.entities)
+    console.log("---")
+    console.log("---")
+    console.log(s9d_pltSrv.entities)
     
     this.on('READ', tbusinessobject, request => {
       return s9d_tbusobj.tx(request).run(request.query);

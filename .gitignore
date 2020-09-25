@@ -47,3 +47,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+
+# Source folder of SAP Fiori Tools generated project
+app/cbo-tbusinessobject-ui/src

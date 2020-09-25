@@ -1,0 +1,1 @@
+using browse as service from '../../srv/cbo-service.cds';

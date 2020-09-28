@@ -5,11 +5,48 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "cds run",
       "name": "cds run",
+      "type": "node",
       "request": "launch",
-      "type": "node-terminal",
-      "skipFiles": [ "<node_internals>/**" ]
+      "program": "${workspaceFolder}/node_modules/.bin/cds",
+      "args": [
+        "run",
+        "--with-mocks",
+        "--in-memory?"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "internalConsole",
+      "autoAttachChildProcesses": true
+    },
+    {
+      "name": "cds serve srv",
+      "cwd": "${workspaceFolder}/srv",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/cds",
+      "args": [
+        "serve",
+        "gen/csn.json"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "internalConsole",
+      "autoAttachChildProcesses": true
+    },
+    {
+      "name": "cds debug srv cf",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/srv",
+      "remoteRoot": "/app",
+      "sourceMaps": true
     }
   ]
 }

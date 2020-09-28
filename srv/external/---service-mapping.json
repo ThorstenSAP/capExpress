@@ -1,0 +1,22 @@
+{
+  "NorthWind": {
+    "directoryName": "o-data-demo-service",
+    "servicePath": "VALUE_IS_UNDEFINED",
+    "npmPackageName": "o-data-demo-service"
+  },
+  "s9d_Z_PLT_SRV": {
+    "directoryName": "z-plt-service",
+    "servicePath": "/sap/opu/odata/sap/Z_PLT_SRV",
+    "npmPackageName": "z-plt-service"
+  },
+  "tbusinessobject": {
+    "directoryName": "x-js-sx-tbusinessobject-cds-service",
+    "servicePath": "/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
+    "npmPackageName": "x-js-sx-tbusinessobject-cds-service"
+  },
+  "xJSSxTBUSINESSOBJECT": {
+    "directoryName": "x-js-sx-tbusinessobject-cds-service-1",
+    "servicePath": "/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
+    "npmPackageName": "x-js-sx-tbusinessobject-cds-service-1"
+  }
+}

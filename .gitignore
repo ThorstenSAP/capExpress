@@ -51,3 +51,6 @@ Thumbs.db
 
 # Source folder of SAP Fiori Tools generated project
 app/cbo-tbusinessobject-ui/src
+
+odata-client
+--odata-client

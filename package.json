@@ -22,16 +22,6 @@
   },
   "cds": {
     "requires": {
-      "tbusinessobject": {
-        "kind": "odata",
-        "model": "srv/external/tbusinessobject",
-        "credentials": {
-          "--xdestination": "NETWEAVER_ABAP",
-          "destination": "S9D_LOCAL",
-          "--zdestination": "LOCAL",
-          "--requestTimeout": 30000
-        }
-      },
       "NorthWind": {
         "kind": "odata",
         "model": "srv/external/NorthWind",
@@ -43,17 +33,16 @@
         "kind": "odata",
         "model": "srv/external/xJSSxTBUSINESSOBJECT",
         "credentials": {
-          "destination": "S9D_LOCAL",
-          "--url": "http://qebui.js-soft.local:8000/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS/",
-          "--username": "tmueller",
-          "--password": "Myjssap93!"
+          "url": "http://qebui.js-soft.local:8000/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
+          "username": "tmueller",
+          "password": "Myjssap93!"
         }
       },
       "s9d_Z_PLT_SRV": {
         "kind": "odata",
         "model": "srv/external/s9d_Z_PLT_SRV",
         "credentials": {
-          "url": "http://qebui.js-soft.local:8000/sap/opu/odata/sap/Z_PLT_SRV/",
+          "url": "http://qebui.js-soft.local:8000/sap/opu/odata/sap/Z_PLT_SRV",
           "username": "tmueller",
           "password": "Myjssap93!"
         }

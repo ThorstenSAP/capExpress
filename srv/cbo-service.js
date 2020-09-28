@@ -2,7 +2,7 @@ const cds = require('@sap/cds');
 
 module.exports = cds.service.impl(async function() {
     const s9d_tbusobj = await cds.connect.to('xJSSxTBUSINESSOBJECT');
-    const s9d_peopleSet = await cds.connect.to('s9d_Z_PLT_SRV');
+    const s9d_peopleSet = await cds.connect.to("s9d_Z_PLT_SRV")
     const {xJSSxTBUSINESSOBJECT, PeopleSet} = this.entities;
     
 

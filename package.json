@@ -35,7 +35,7 @@
         "credentials": {
           "url": "http://qebui.js-soft.local:8000/sap/opu/odata/JSS/TBUSINESSOBJECT_CDS",
           "username": "tmueller",
-          "password": "Myjssoft93!"
+          "password": "Myjssap93!"
         }
       },
       "s9d_Z_PLT_SRV": {
@@ -44,7 +44,7 @@
         "credentials": {
           "url": "http://qebui.js-soft.local:8000/sap/opu/odata/sap/Z_PLT_SRV",
           "username": "tmueller",
-          "password": "Myjssoft93!"
+          "password": "Myjssap93!"
         }
       }
     }

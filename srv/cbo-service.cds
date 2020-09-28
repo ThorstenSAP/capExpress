@@ -6,7 +6,7 @@ using {NorthWind as externNorthwind} from './external/NorthWind';
 @path: '/browse'
 service browse {
     entity xJSSxTBUSINESSOBJECT as projection on externalxJSSx.xJSSxTBUSINESSOBJECT;
-    // entity PeopleSet as select from s9dEmployee.PeopleSet;
+    entity PeopleSet as select from s9dEmployee.PeopleSet;
 
 }
 

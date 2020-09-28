@@ -11,7 +11,7 @@ module.exports = cds.service.impl(async function() {
       return response
     });
     this.on('READ', PeopleSet, async (request) => {
-      let response=  await s9d_tbus9d_peopleSetsobj.tx(request).run(request.query);
+      let response=  await s9d_peopleSet.tx(request).run(request.query);
       return response
     });
 });

@@ -12,6 +12,9 @@ module.exports = cds.service.impl(async function() {
     });
     this.on('READ', PeopleSet, async (request) => {
       let response=  await s9d_peopleSet.tx(request).run(request.query);
+      response.forEach(element => {
+        element.Birthday = new Date(1 * element.Birthday.replace(/\/Date\(([-\d]*)\)\//, "$1")).toISOString()//.split('T')[0]
+      });
       return response
     });
 });

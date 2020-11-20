@@ -1,0 +1,46 @@
+## Generated mta.yaml based on template version 0.4.0
+## appName = cbo-tbusinessobject
+## language=nodejs; multiTenant=false
+## approuter=
+_schema-version: '3.1'
+ID: cbo-tbusinessobject
+version: 1.0.0
+description: "cap-external service test"
+parameters:
+  enable-parallel-deployments: true
+   
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm install --production
+      - npx -p @sap/cds-dk cds build --production
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: cbo-tbusinessobject-srv
+ # ------------------------------------------------------------
+   type: nodejs
+   path: gen/srv
+   provides:
+    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
+      properties:
+        srv-url: ${default-url}
+   requires:
+       - name: cbo-tbo-destination-service
+       - name: cbo-tbo-uaa
+
+resources:
+ - name: cbo-tbo-destination-service
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: cbo-tbo-destination-service
+
+ - name: cbo-tbo-uaa     
+   type: org.cloudfoundry.managed-service
+   parameters:
+     path: ./xs-security.json
+     service: xsuaa
+     service-plan: application 
+
+

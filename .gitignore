@@ -54,3 +54,11 @@ app/cbo-tbusinessobject-ui/src
 
 odata-client
 --odata-client
+
+#generated stuff
+gen/
+mta_archives/
+Makefile_*
+
+#credentials
+default-env.json

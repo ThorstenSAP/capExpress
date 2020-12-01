@@ -8,12 +8,13 @@
   "dependencies": {
     "@sap-cloud-sdk/core": "^1.28.1",
     "@sap-cloud-sdk/generator": "^1.28.1",
+    "@sap/approuter": "^8.6.1",
     "@sap/cds": "^4.2.4",
     "@sap/cds-dk": "^3.1.2",
     "@sap/cds-odata-v2-adapter-proxy": "^1.4.44",
     "@sap/xsenv": "^3.1.0",
     "@sap/xssec": "^3.0.10",
-    "express": "^4",
+    "express": "^4.17.1",
     "mbt": "^1.0.16",
     "passport": "^0.4.1"
   },
@@ -24,7 +25,8 @@
   "scripts": {
     "start": "npx cds run",
     "generate-odata-client": "npx generate-odata-client --inputDir srv/external --outputDir srv/odata-client --forceOverwrite",
-    "build-and-deploy": "mbt build && cf push cbo-tbusinessobject-srv"
+    "--build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src",
+    "cf:BAD": "mbt build && cf push cbo-tbusinessobject-srv"
   },
   "cds": {
     "requires": {
@@ -49,9 +51,20 @@
           "destination": "S9D-PLT"
         }
       }
+    },
+    "build": {
+      "target": "gen",
+      "tasks": [
+        {
+          "for": "node-cf",
+          "src": "srv",
+          "options": {
+            "model": [
+              "srv"
+            ]
+          }
+        }
+      ]
     }
-  },
-  "sapux": [
-    "app/cbo-tbusinessobject-ui"
-  ]
+  }
 }

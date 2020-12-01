@@ -21,7 +21,7 @@ modules:
  - name: cbo-tbusinessobject-srv
  # ------------------------------------------------------------
    type: nodejs
-   path: gen/srv
+   path: gen
    provides:
     - name: srv-api      # required by consumers of CAP services (e.g. approuter)
       properties:
@@ -41,6 +41,7 @@ resources:
    parameters:
      path: ./xs-security.json
      service: xsuaa
+     service-name: cbo-tbo-uaa
      service-plan: application 
 
 

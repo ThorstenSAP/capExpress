@@ -1,0 +1,7 @@
+{
+  "xsappname": "cbo-tbo-uaa",
+  "tenant-mode": "dedicated",
+  "scopes": [],
+  "attributes": [],
+  "role-templates": []
+}

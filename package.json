@@ -34,7 +34,7 @@
         "kind": "odata",
         "model": "srv/external/NorthWind",
         "credentials": {
-          "destination": "Northwind"
+          "url": "https://services.odata.org/Experimental/OData/OData.svc"
         }
       }
     },

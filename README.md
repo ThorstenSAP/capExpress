@@ -4,4 +4,4 @@
 - start the express server
 
 ### The issue
-- when calling a service (e.g. Northwind) the error 'TypeError: Cannot read property 'target' of undefined' is thrown
+- when calling a service (e.g. NorthWind) the error 'TypeError: Cannot read property 'target' of undefined' is thrown

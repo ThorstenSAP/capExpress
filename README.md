@@ -1,6 +1,7 @@
-https://blogs.sap.com/2020/05/26/cap-consume-external-service-part-1/
-### maybe another useful link
-https://blogs.sap.com/2020/07/08/resolving-date-serialization-issues-when-using-an-external-odata-v2-service-with-cap/
+### Recreate the issue by
+- run npm install in the root of the project
+- build the command with 'mbt build' (I'm on version 1.0.16)
+- start the express server
 
-### when the project strikes
-try 'npm cache clean --force', delete package-lock.json and then use npm install
+### The issue
+- when calling a service (e.g. Northwind) the error 'TypeError: Cannot read property 'target' of undefined' is thrown
